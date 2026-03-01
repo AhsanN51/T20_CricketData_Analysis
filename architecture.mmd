@@ -1,0 +1,9 @@
+graph TD
+    classDef process fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef storage fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef bi fill:#fbb,stroke:#333,stroke-width:2px;
+
+    A[Web Scraping Scripts <br/> Bright Data / JS]:::process -->|Extract| B[(Raw Data<br/>JSON Files)]:::storage
+    B -->|Load| C[Data Preprocessing <br/> Jupyter Notebook / Pandas]:::process
+    C -->|Transform| D[(Processed Data<br/>CSV Files)]:::storage
+    D -->|Import| E[Power BI <br/> Data Modeling & Dashboards]:::bi
